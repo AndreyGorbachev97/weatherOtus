@@ -1,1 +1,1 @@
-{"version":3,"file":"bundle.js","mappings":"AAAAA,QAAQC,IAAI","sources":["webpack://weatherotus/./src/index.js"],"sourcesContent":["console.log(\"test\")"],"names":["console","log"],"sourceRoot":""}
+{"version":3,"file":"bundle.js","mappings":"yBAAAA,QAAQC,IAAI,O","sources":["webpack://weatherotus/./src/index.js"],"sourcesContent":["console.log(\"test\")\n\nexport const sum = (a, b) => a + b"],"names":["console","log"],"sourceRoot":""}
