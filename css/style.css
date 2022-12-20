@@ -1,0 +1,88 @@
+@import "fonts.css";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  padding: 64px;
+  margin: 0 auto;
+}
+
+.tag {
+  padding: 6px;
+  margin: 4px;
+  background-color: rgb(90, 99, 219);
+  border: 2px solid rgb(72, 54, 153);
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.history-cities {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.current-city {
+  display: flex;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.img {
+  margin-right: 8px;
+}
+.info-wether {
+}
+
+.loading {
+  padding: 26px;
+  font-size: 22px;
+  color: rgb(49, 49, 49);
+}
+
+h1 {
+  margin-bottom: 48px;
+  color: #464646;
+}
+
+h2 {
+  font-size: 20px;
+  color: #464646;
+}
+
+.input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #c0b1c5;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #464646;
+  cursor: text;
+  font-size: 16px;
+  max-height: 100%;
+  outline: none;
+  padding: 13px 19px 13px 13px;
+  resize: none;
+
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.label {
+  margin-bottom: 16px;
+}
