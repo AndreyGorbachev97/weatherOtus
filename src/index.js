@@ -1,8 +1,5 @@
 import "../css/style.css";
 import { getLocation } from "./getLocation";
-import { loading } from "./loading";
-import { apiKey } from "./constants";
-import { renderCity } from "./renderCity"
 import { getCityCoord } from "./getCityCoord"
 import { renderCitiesBtn } from "./renderCitiesBtn"
 
@@ -11,7 +8,7 @@ getLocation()
 
 // Вешаем событие на инпут
 const input = document.querySelector(".input")
-input.addEventListener("change", (event) => getCityCoord(event.target.value))
+input?.addEventListener("change", (event) => getCityCoord(event.target.value))
 
 renderCitiesBtn()
 

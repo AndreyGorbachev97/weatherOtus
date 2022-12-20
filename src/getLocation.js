@@ -4,6 +4,6 @@ export function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(initWeather);
   } else {
-    x.innerHTML = "Браузер не поддерживает геолокацию.";
+    alert("Браузер не поддерживает геолокацию.")
   }
 }
