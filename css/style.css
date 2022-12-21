@@ -86,3 +86,7 @@ h2 {
 .label {
   margin-bottom: 16px;
 }
+
+#map {
+  height: 250px;
+}

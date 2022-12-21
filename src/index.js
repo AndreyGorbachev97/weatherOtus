@@ -12,5 +12,4 @@ input?.addEventListener("change", (event) => getCityCoord(event.target.value))
 
 renderCitiesBtn()
 
-
 export const sum = (a, b) => a + b
