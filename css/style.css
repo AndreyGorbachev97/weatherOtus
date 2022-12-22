@@ -34,6 +34,7 @@ body {
 .history-cities {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
 .current-city {
@@ -85,4 +86,8 @@ h2 {
 
 .label {
   margin-bottom: 16px;
+}
+
+#map {
+  height: 250px;
 }
