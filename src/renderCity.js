@@ -18,9 +18,10 @@ export const renderCity = async (city) => {
 
   icon.src = `https://openweathermap.org/img/w/${iconId}.png`
   pCityName.innerText = `${cityName}`
-  bTemp.innerText = temp.toFixed(2)
+  bTemp.innerText = temp.toFixed(2) > 0 ? `+ ${temp.toFixed(2)}` : temp.toFixed(2)
   pTemp.innerText = `Температура воздуха составляет ${temp.toFixed(2)} градус(ов)`
   pDesc.innerText = desc
+
 
   info.append(bTemp)
   info.append(pCityName)
