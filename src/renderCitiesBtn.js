@@ -1,7 +1,7 @@
 import { getCityCoord } from "./getCityCoord";
 
-export const renderCitiesBtn = () => {
-  const container = document.querySelector(".history-cities")
+export const renderCitiesBtn = (el) => {
+  const container = el.querySelector(".history-cities")
   container.innerHTML = ""
   const store = localStorage.getItem("cities");
   if (store) {

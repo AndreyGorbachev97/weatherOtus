@@ -4,9 +4,9 @@ import { loading } from "./loading";
 import { renderCitiesBtn } from "./renderCitiesBtn";
 import { renderCity } from "./renderCity"
 
-export const getCityCoord = async (city) => {
+export const getCityCoord = async (city, el) => {
   try {
-    loading()
+    loading(el)
     const res = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`)
     const data = await res.json();
     const store = localStorage.getItem("cities");
@@ -17,16 +17,16 @@ export const getCityCoord = async (city) => {
         cities = cities.slice(0, 9)
       }
       localStorage.setItem("cities", JSON.stringify([city, ...cities]))
-      renderCitiesBtn()
+      renderCitiesBtn(el)
     } else {
       localStorage.setItem("cities", JSON.stringify([city]))
-      renderCitiesBtn()
+      renderCitiesBtn(el)
     }
 
     if (data[0]) {
       let { lat, lon } = data[0]
-      const city = await getWeatherByCoord(lat, lon)
-      renderCity(city)
+      const city = await getWeatherByCoord(lat, lon, el, apiKey)
+      renderCity(city, el)
     }
 
   } catch (e) {

@@ -1,9 +1,13 @@
 import { renderCity } from "./renderCity";
 import { loading } from "./loading";
 import { getWeatherByCoord } from "./getWeatherByCoord"
+import { apiKey } from "./constants"
+
+const body = document.querySelector("body")
 
 export function initWeather(position) {
-  loading()
-  getWeatherByCoord(position.coords.latitude, position.coords.longitude)
-    .then((res) => renderCity(res))
+  loading(body)
+  console.log("position11", position)
+  getWeatherByCoord(position.coords.latitude, position.coords.longitude, body, apiKey)
+    .then((res) => renderCity(res, body))
 } 
