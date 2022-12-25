@@ -1,17 +1,13 @@
-import { renderCitiesBtn } from "./renderCitiesBtn";
-
-export const saveHistory = (city, el) => {
+export const saveHistory = (city) => {
   const store = localStorage.getItem("cities");
 
   if (store) {
-    let cities = JSON.parse(store)
+    let cities = JSON.parse(store);
     if (cities.length >= 10) {
-      cities = cities.slice(0, 9)
+      cities = cities.slice(0, 9);
     }
-    localStorage.setItem("cities", JSON.stringify([city, ...cities]))
-    renderCitiesBtn(el)
+    localStorage.setItem("cities", JSON.stringify([city, ...cities]));
   } else {
-    localStorage.setItem("cities", JSON.stringify([city]))
-    renderCitiesBtn(el)
+    localStorage.setItem("cities", JSON.stringify([city]));
   }
-}
+};

@@ -12,10 +12,13 @@ module.exports = {
   plugins: ["jest"],
   rules: {
     "import/prefer-default-export": "off",
+    "no-new": 0,
+    "no-param-reassign": ["error", { props: false }],
     "max-len": [
       "error",
       {
         ignoreComments: true,
+        ignoreUrls: true,
       },
     ],
   },
