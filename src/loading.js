@@ -1,5 +1,5 @@
-export const loading = () => {
-  const container = document.querySelector(".current-city")
+export const loading = (el) => {
+  const container = el.querySelector(".current-city")
   if (container) {
     container.innerHTML = ""
     const load = document.createElement("div");
@@ -7,5 +7,4 @@ export const loading = () => {
     load.innerText = "Загрузка данных..."
     container.append(load)
   }
-
 }

@@ -12,9 +12,9 @@ jobs:
       - name: Install Packages
         run: |
           npm install
-      # - name: Lint check
-      #   run: |
-      #     npm run lint
+      - name: Lint check
+        run: |
+          npm run lint
       - name: Test check
         run: |
           npm run test
