@@ -1,4 +1,5 @@
-import { getCityCoord } from "./getCityCoord";
+import { getCoordByCity } from "./getCoordByCity";
+import { apiKey } from "./constants"
 
 export const renderCitiesBtn = (el) => {
   const container = el.querySelector(".history-cities")
@@ -10,7 +11,7 @@ export const renderCitiesBtn = (el) => {
       const cityElement = document.createElement("div")
       cityElement.className = "tag"
       cityElement.innerHTML = item
-      cityElement.addEventListener("click", () => getCityCoord(item))
+      cityElement.addEventListener("click", () => getCoordByCity(item, el, apiKey))
       container.append(cityElement)
     })
   }

@@ -1,5 +1,4 @@
 export const renderCity = async (city, el) => {
-  console.log("city", city)
   const temp = city.main.temp - 273.15;
   const cityName = city.name;
   const iconId = city.weather[0].icon;

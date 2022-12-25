@@ -1,6 +1,7 @@
 import "../css/style.css";
+import { apiKey } from "./constants"
 import { getLocation } from "./getLocation";
-import { getCityCoord } from "./getCityCoord";
+import { getCoordByCity } from "./getCoordByCity";
 import { renderCitiesBtn } from "./renderCitiesBtn";
 import { renderUI } from "./renderUI";
 
@@ -14,8 +15,6 @@ getLocation(body)
 
 // Вешаем событие на инпут
 const input = body.querySelector(".input")
-input?.addEventListener("change", (event) => getCityCoord(event.target.value, body))
+input?.addEventListener("change", (event) => getCoordByCity(event.target.value, body, apiKey))
 
-renderCitiesBtn()
-
-export const sum = (a, b) => a + b
+renderCitiesBtn(body)
