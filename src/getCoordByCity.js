@@ -19,7 +19,6 @@ export const getCoordByCity = async (city, el, apiKey) => {
     }
     return data[0];
   } catch (e) {
-    console.error(e);
     return e;
   }
 };

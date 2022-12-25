@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1671970659413" clover="3.2.0">
-  <project timestamp="1671970659414" name="All files">
-    <metrics statements="143" coveredstatements="134" conditionals="16" coveredconditionals="12" methods="8" coveredmethods="8" elements="167" coveredelements="154" complexity="0" loc="143" ncloc="143" packages="1" files="9" classes="9"/>
+<coverage generated="1671989414820" clover="3.2.0">
+  <project timestamp="1671989414820" name="All files">
+    <metrics statements="142" coveredstatements="132" conditionals="16" coveredconditionals="12" methods="8" coveredmethods="8" elements="166" coveredelements="152" complexity="0" loc="142" ncloc="142" packages="1" files="9" classes="9"/>
     <file name="constants.js" path="E:\otus\projects\weatherOtus\src\constants.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
@@ -14,8 +14,8 @@
       <line num="4" count="1" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="8" count="1" type="stmt"/>
       <line num="9" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
       <line num="11" count="1" type="stmt"/>
@@ -34,22 +34,24 @@
       <line num="24" count="1" type="stmt"/>
     </file>
     <file name="getWeatherByCoord.js" path="E:\otus\projects\weatherOtus\src\getWeatherByCoord.js">
-      <metrics statements="15" coveredstatements="13" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <metrics statements="17" coveredstatements="15" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
       <line num="5" count="3" type="stmt"/>
       <line num="6" count="3" type="stmt"/>
-      <line num="7" count="3" type="cond" truecount="0" falsecount="1"/>
+      <line num="7" count="3" type="stmt"/>
       <line num="8" count="3" type="stmt"/>
-      <line num="9" count="3" type="stmt"/>
+      <line num="9" count="3" type="cond" truecount="0" falsecount="1"/>
       <line num="10" count="3" type="stmt"/>
       <line num="11" count="3" type="stmt"/>
-      <line num="12" count="3" type="cond" truecount="0" falsecount="1"/>
-      <line num="13" count="0" type="stmt"/>
-      <line num="14" count="0" type="stmt"/>
-      <line num="15" count="3" type="stmt"/>
+      <line num="12" count="3" type="stmt"/>
+      <line num="13" count="3" type="stmt"/>
+      <line num="14" count="3" type="cond" truecount="0" falsecount="1"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+      <line num="17" count="3" type="stmt"/>
     </file>
     <file name="loading.js" path="E:\otus\projects\weatherOtus\src\loading.js">
       <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
@@ -82,28 +84,30 @@
       <line num="14" count="3" type="stmt"/>
     </file>
     <file name="renderCitiesBtn.js" path="E:\otus\projects\weatherOtus\src\renderCitiesBtn.js">
-      <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="20" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="5" count="4" type="stmt"/>
-      <line num="6" count="4" type="stmt"/>
-      <line num="7" count="4" type="stmt"/>
-      <line num="8" count="4" type="stmt"/>
-      <line num="9" count="4" type="stmt"/>
-      <line num="10" count="4" type="cond" truecount="1" falsecount="0"/>
-      <line num="11" count="24" type="stmt"/>
-      <line num="12" count="24" type="stmt"/>
-      <line num="13" count="24" type="stmt"/>
-      <line num="14" count="24" type="stmt"/>
-      <line num="15" count="24" type="stmt"/>
-      <line num="16" count="4" type="stmt"/>
-      <line num="17" count="4" type="stmt"/>
-      <line num="18" count="4" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="11" count="3" type="stmt"/>
+      <line num="12" count="3" type="stmt"/>
+      <line num="13" count="3" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="16" count="3" type="stmt"/>
+      <line num="17" count="3" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
     </file>
     <file name="renderCity.js" path="E:\otus\projects\weatherOtus\src\renderCity.js">
-      <metrics statements="32" coveredstatements="32" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <metrics statements="31" coveredstatements="31" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
       <line num="2" count="2" type="stmt"/>
       <line num="3" count="2" type="stmt"/>
@@ -123,8 +127,8 @@
       <line num="17" count="2" type="stmt"/>
       <line num="18" count="2" type="stmt"/>
       <line num="19" count="2" type="stmt"/>
-      <line num="20" count="2" type="cond" truecount="0" falsecount="1"/>
-      <line num="21" count="2" type="stmt"/>
+      <line num="20" count="2" type="stmt"/>
+      <line num="21" count="2" type="cond" truecount="0" falsecount="1"/>
       <line num="22" count="2" type="stmt"/>
       <line num="23" count="2" type="stmt"/>
       <line num="24" count="2" type="stmt"/>
@@ -135,7 +139,6 @@
       <line num="29" count="2" type="stmt"/>
       <line num="30" count="2" type="stmt"/>
       <line num="31" count="2" type="stmt"/>
-      <line num="32" count="2" type="stmt"/>
     </file>
     <file name="renderUI.js" path="E:\otus\projects\weatherOtus\src\renderUI.js">
       <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
@@ -153,24 +156,20 @@
       <line num="12" count="8" type="stmt"/>
     </file>
     <file name="saveHistory.js" path="E:\otus\projects\weatherOtus\src\saveHistory.js">
-      <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="4" count="3" type="stmt"/>
-      <line num="5" count="3" type="stmt"/>
-      <line num="6" count="3" type="cond" truecount="1" falsecount="0"/>
-      <line num="7" count="2" type="stmt"/>
-      <line num="8" count="2" type="cond" truecount="1" falsecount="0"/>
-      <line num="9" count="1" type="stmt"/>
-      <line num="10" count="1" type="stmt"/>
-      <line num="11" count="2" type="stmt"/>
-      <line num="12" count="2" type="stmt"/>
-      <line num="13" count="3" type="cond" truecount="1" falsecount="0"/>
-      <line num="14" count="1" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
-      <line num="16" count="1" type="stmt"/>
-      <line num="17" count="3" type="stmt"/>
+      <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="2" count="3" type="stmt"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="4" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="6" count="2" type="cond" truecount="1" falsecount="0"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="13" count="3" type="stmt"/>
     </file>
   </project>
 </coverage>

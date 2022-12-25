@@ -12,7 +12,6 @@ export const getWeatherByCoord = async (lat, lon, el, apiKey) => {
     renderMap([lat, lon]);
     return data;
   } catch (e) {
-    console.error(e);
     return e;
   }
 };
