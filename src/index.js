@@ -14,8 +14,9 @@ getLocation(body);
 
 // Вешаем событие на инпут
 const input = body.querySelector(".input");
-input?.addEventListener("change", (event) => {
-  getCoordByCity(event.target.value, body, apiKey);
+input?.addEventListener("change", async (event) => {
+  await getCoordByCity(event.target.value, body, apiKey);
+  renderCitiesBtn(body);
 });
 
 renderCitiesBtn(body);
