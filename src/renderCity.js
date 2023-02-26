@@ -1,31 +1,26 @@
-export const renderCity = async (city, el) => {
-  const temp = city.main.temp - 273.15;
-  const cityName = city.name;
-  const iconId = city.weather[0].icon;
-  const desc = city.weather[0].description;
-  const container = el.querySelector(".current-city");
-  container.innerHTML = "";
+import { Component } from "./Component";
 
-  const info = document.createElement("div");
-  info.classList = "info-wether";
-  const pCityName = document.createElement("div");
-  const bTemp = document.createElement("h2");
-  const pTemp = document.createElement("div");
-  const icon = document.createElement("img");
-  icon.className = "img";
-  const pDesc = document.createElement("div");
+export class RenderCity extends Component {
+  state = {};
 
-  const tempRound = temp.toFixed(2);
-  icon.src = `https://openweathermap.org/img/w/${iconId}.png`;
-  pCityName.innerText = `${cityName}`;
-  bTemp.innerText = tempRound > 0 ? `+ ${tempRound} °C` : `${tempRound} °C`;
-  pTemp.innerText = `Температура воздуха составляет ${tempRound} градус(ов)`;
-  pDesc.innerText = desc;
+  render() {
+    const temp = this.state.main.temp - 273.15;
+    const cityName = this.state.name;
+    const iconId = this.state.weather[0].icon;
+    const desc = this.state.weather[0].description;
+    const tempRound = temp.toFixed(2);
+    const tempFormat = tempRound > 0 ? `+ ${tempRound} °C` : `${tempRound} °C`;
+    const fullDesc = `Температура воздуха составляет ${tempRound} градус(ов)`;
+    const iconSrc = `https://openweathermap.org/img/w/${iconId}.png`;
 
-  info.append(bTemp);
-  info.append(pCityName);
-  info.append(pTemp);
-  info.append(pDesc);
-  container.append(icon);
-  container.append(info);
-};
+    return `
+    <img class="img" src="${iconSrc}">
+    <div class="info-wether">
+      <h2>${tempFormat}</h2>
+      <div>${cityName}</div>
+      <div>${fullDesc}</div>
+      <div>${desc}</div>
+    </div>
+    `;
+  }
+}

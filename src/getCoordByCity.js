@@ -1,8 +1,9 @@
 import axios from "axios";
 import { getWeatherByCoord } from "./getWeatherByCoord";
 import { loading } from "./loading";
-import { renderCity } from "./renderCity";
+import { RenderCity } from "./renderCity";
 import { saveHistory } from "./saveHistory";
+import { renderMap } from "./map";
 
 export const getCoordByCity = async (city, el, apiKey) => {
   try {
@@ -11,11 +12,12 @@ export const getCoordByCity = async (city, el, apiKey) => {
       `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`
     );
     saveHistory(city);
-
     if (data[0]) {
       const { lat, lon } = data[0];
       const wetherForCity = await getWeatherByCoord(lat, lon, el, apiKey);
-      renderCity(wetherForCity, el);
+      renderMap([lat, lon]);
+      const container = el.querySelector(".current-city");
+      new RenderCity(container, wetherForCity);
     }
     return data[0];
   } catch (e) {

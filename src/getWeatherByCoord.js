@@ -1,5 +1,4 @@
 import axios from "axios";
-import { renderMap } from "./map";
 
 export const getWeatherByCoord = async (lat, lon, el, apiKey) => {
   try {
@@ -9,7 +8,6 @@ export const getWeatherByCoord = async (lat, lon, el, apiKey) => {
     if (data.cod !== 200) throw new Error(data.message);
     const map = el.querySelector("#map");
     map.innerHTML = "";
-    renderMap([lat, lon]);
     return data;
   } catch (e) {
     return e;

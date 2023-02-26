@@ -1,15 +1,15 @@
 import { loading } from "../src/loading";
-import { renderUI } from "../src/renderUI";
+import { renderUI, RenderUI } from "../src/renderUI";
 
-describe('loading', () => {
+describe("loading", () => {
   let el;
   beforeEach(() => {
     el = document.createElement("div");
-    renderUI(el);
+    new RenderUI(el, {});
   });
 
-  it('is loading', () => {
-    loading(el)
+  it("is loading", () => {
+    loading(el);
     expect(el.querySelector(".loading")).toBeTruthy();
     expect(el.querySelector(".loading").innerText).toBe("Загрузка данных...");
   });
