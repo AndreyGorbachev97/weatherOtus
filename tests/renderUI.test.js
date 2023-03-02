@@ -1,10 +1,12 @@
-import { renderUI } from "../src/renderUI";
+import { RenderUI } from "../src/renderUI";
 
-describe("loading", () => {
+describe("check Render UI", () => {
   let el;
   beforeEach(() => {
     el = document.createElement("div");
-    renderUI(el);
+    new RenderUI(el, {
+      title: "MeteoOtus",
+    });
   });
 
   it("create basic markup", () => {

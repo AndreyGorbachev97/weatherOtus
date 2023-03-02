@@ -1,42 +1,44 @@
-const { resolve } = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { resolve } = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = (env) => ({
-  entry: { index: './src/index.js' },
+  entry: { index: "./src/index.js" },
   output: {
-    path: resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: resolve(__dirname, "dist"),
+    filename: "bundle.js",
     clean: true,
     environment: {
       arrowFunction: false,
     },
   },
-  devtool: env.production ? 'source-map' : 'eval-source-map',
-  mode: env.production ? 'production' : 'development',
+  devtool: env.production ? "source-map" : "eval-source-map",
+  mode: env.production ? "production" : "development",
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(j|t)s$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
+          loader: "babel-loader",
         },
       },
       {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        loader: "ts-loader",
+      },
+      {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'fonts/[name][ext]',
+          filename: "fonts/[name][ext]",
         },
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.html$/i,
@@ -44,29 +46,25 @@ module.exports = (env) => ({
       },
       {
         test: /\.(jpg)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'images/[name][ext]',
+          filename: "images/[name][ext]",
         },
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: "index.html",
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
   optimization: {
-    minimizer: [
-      `...`,
-      new CssMinimizerPlugin(),
-    ],
+    minimizer: [`...`, new CssMinimizerPlugin()],
   },
   devServer: {
     compress: true,
     port: 9000,
-    watchFiles: ['*.html'],
+    watchFiles: ["*.html"],
   },
-
 });

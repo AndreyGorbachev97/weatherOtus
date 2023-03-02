@@ -1,11 +1,13 @@
-import { renderUI } from "../src/renderUI";
+import { RenderUI } from "../src/renderUI";
 import { saveHistory } from "../src/saveHistory";
 
 describe("working history", () => {
   let el;
   beforeEach(() => {
     el = document.createElement("div");
-    renderUI(el);
+    new RenderUI(el, {
+      title: "MeteoOtus",
+    });
   });
 
   it("save to the beginning of the array", async () => {
